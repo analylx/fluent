@@ -1,5 +1,4 @@
 #关于fluent python的笔记
-
 #列表推导
 symbols = '$¢£¥€¤'
 codes = [ord(symbol) for symbol in symbols]
@@ -17,7 +16,11 @@ for tshirt in ('%s %s' % (c, s) for c in colors for s in range(10)):
 from collections import namedtuple
 City = namedtuple('City', 'name country population coordinates')
 tokyo = City('Tokyo', 'JP', 36.933, (35.689722, 139.691667))
-City(name='Tokyo', country='JP', population=36.933, coordinates=(35.689722,139.691667))
+City(
+    name='Tokyo',
+    country='JP',
+    population=36.933,
+    coordinates=(35.689722, 139.691667))
 print(tokyo.population)
 print(tokyo.coordinates)
 print(tokyo[1])
